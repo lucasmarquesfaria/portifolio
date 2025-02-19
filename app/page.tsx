@@ -30,13 +30,13 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white/5 backdrop-blur-sm rounded-full px-6 py-3"
+          className="bg-white/5 backdrop-blur-sm rounded-full px-4 py-2 sm:px-6 sm:py-3"
         >
           {["Sobre", "Projetos", "Depoimentos", "Contato"].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
-              className={`px-4 py-2 text-sm transition-colors ${
+              className={`px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm transition-colors ${
                 activeSection === item.toLowerCase() ? "text-purple-300" : "text-purple-300/60 hover:text-purple-300"
               }`}
             >
@@ -52,7 +52,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-purple-300/90 tracking-[0.2em] text-sm mb-12"
+            className="text-purple-300/90 tracking-[0.2em] text-xs sm:text-sm mb-6 sm:mb-12"
           >
             DESENVOLVEDOR FULL STACK COM NEXT.JS
           </motion.p>
@@ -61,7 +61,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-light mb-12 tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-6 sm:mb-12 tracking-tight"
           >
             Olá! Eu sou Lucas Marques, um Desenvolvedor Full Stack.
           </motion.h1>
@@ -69,7 +69,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
             <button
               onClick={() => scrollToSection("projetos")}
-              className="group bg-white/5 hover:bg-white/10 text-purple-300/90 px-6 py-3 rounded-full text-sm transition-all"
+              className="group bg-white/5 hover:bg-white/10 text-purple-300/90 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm transition-all"
             >
               Veja meus trabalhos
               <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -79,8 +79,8 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projetos" className="min-h-screen flex items-center justify-center px-4 py-32">
-        <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12">
+      <section id="projetos" className="min-h-screen flex items-center justify-center px-4 py-16 sm:py-32">
+        <div className="max-w-6xl w-full grid gap-8 sm:gap-12 md:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -88,13 +88,13 @@ export default function Home() {
             className="relative"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-3xl blur-3xl" />
-            <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-6 h-full">
-            <Image
-              src="/react.png"
-              alt="Project Preview"
-              width={600}
-              height={400}
-              className="rounded-2xl"
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-4 sm:p-6 h-full">
+              <Image
+                src="/react.png"
+                alt="Project Preview"
+                width={600}
+                height={400}
+                className="rounded-2xl"
               />
             </div>
           </motion.div>
@@ -105,12 +105,18 @@ export default function Home() {
             viewport={{ once: true }}
             className="flex items-center"
           >
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8">
-              <h2 className="text-2xl md:text-3xl font-light mb-4">Experiência em desenvolvimento web moderno</h2>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-4 sm:p-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-light mb-4">Experiência em desenvolvimento web moderno</h2>
               <p className="text-purple-300/90">
                 Desenvolvedor Full Stack com foco em tecnologias modernas como PHP, Laravel, JavaScript, Next.js e
                 TailwindCSS.
               </p>
+              <ul className="list-disc list-inside text-purple-300/90 mt-4">
+                <li>Desenvolvimento de aplicações web responsivas</li>
+                <li>Integração com APIs RESTful e GraphQL</li>
+                <li>Otimização de performance e SEO</li>
+                <li>Testes automatizados e TDD</li>
+              </ul>
             </div>
           </motion.div>
         </div>
@@ -123,36 +129,36 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-sm rounded-3xl p-8"
+            className="bg-white/5 backdrop-blur-sm rounded-3xl p-4 sm:p-8"
           >
-            <h2 className="text-2xl font-light mb-6">Projetos Voluntários</h2>
-            <p className="text-purple-300/90 mb-6">
+            <h2 className="text-xl sm:text-2xl font-light mb-4 sm:mb-6">Projetos Voluntários</h2>
+            <p className="text-purple-300/90 mb-4 sm:mb-6">
               Atualmente colaborando com o Código Certo Coders e VolunDev, auxiliando iniciantes na área de tecnologia e
               fornecendo soluções tecnológicas para projetos sociais.
             </p>
-            <div className="relative w-full h-64 overflow-hidden rounded-3xl">
+            <div className="relative w-full h-48 sm:h-64 overflow-hidden rounded-3xl">
               <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="absolute inset-0 flex space-x-4"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="absolute inset-0 flex space-x-4"
               >
                 <motion.div
-                initial={{ x: 0 }}
-                animate={{ x: ["0%", "-33.33%", "-66.66%", "0%"] }}
-                transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-                className="flex space-x-4"
+                  initial={{ x: 0 }}
+                  animate={{ x: ["0%", "-33.33%", "-66.66%", "0%"] }}
+                  transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+                  className="flex space-x-4"
                 >
-                {["/project1.png", "/project2.png", "/project3.png", "/project1.png"].map((src, index) => (
-                  <Image
-                  key={index}
-                  src={src}
-                  alt={`Project ${index + 1}`}
-                  width={300}
-                  height={200}
-                  className="rounded-2xl"
-                  />
-                ))}
+                  {["/project1.png", "/project2.png", "/project3.png", "/project1.png"].map((src, index) => (
+                    <Image
+                      key={index}
+                      src={src}
+                      alt={`Project ${index + 1}`}
+                      width={300}
+                      height={200}
+                      className="rounded-2xl"
+                    />
+                  ))}
                 </motion.div>
               </motion.div>
             </div>
@@ -166,13 +172,13 @@ export default function Home() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center space-y-6"
+          className="text-center space-y-4 sm:space-y-6"
         >
-          <h2 className="text-2xl font-light mb-6">Entre em contato</h2>
+          <h2 className="text-xl sm:text-2xl font-light mb-4 sm:mb-6">Entre em contato</h2>
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <a
               href="mailto:lucas@marquesdeveloper.com"
-              className="group bg-white/5 hover:bg-white/10 text-purple-300/90 px-6 py-3 rounded-full text-sm transition-all inline-flex items-center"
+              className="group bg-white/5 hover:bg-white/10 text-purple-300/90 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm transition-all inline-flex items-center"
             >
               Enviar e-mail
               <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -181,11 +187,22 @@ export default function Home() {
               href="https://wa.me/5533991991085?text=Olá,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white/5 hover:bg-white/10 text-purple-300/90 px-6 py-3 rounded-full text-sm transition-all inline-flex items-center"
+              className="group bg-white/5 hover:bg-white/10 text-purple-300/90 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm transition-all inline-flex items-center"
             >
               WhatsApp
               <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
             </a>
+          </div>
+          <div className="mt-6">
+            <p className="text-purple-300/90">Ou me encontre nas redes sociais:</p>
+            <div className="flex justify-center space-x-4 mt-4">
+              <a href="https://www.linkedin.com/in/lucasmf99/" target="_blank" rel="noopener noreferrer">
+                <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} />
+              </a>
+              <a href="https://github.com/lucasmarquesfaria" target="_blank" rel="noopener noreferrer">
+                <Image src="/github.png" alt="GitHub" width={32} height={32} />
+              </a>
+            </div>
           </div>
         </motion.div>
       </section>
