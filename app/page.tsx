@@ -32,7 +32,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white/5 backdrop-blur-sm rounded-full px-4 py-2 sm:px-6 sm:py-3"
         >
-          {["Sobre", "Projetos", "Depoimentos", "Contato"].map((item) => (
+          {["Sobre", "Projetos", "Depoimentos", "Contato", "Skills", "Certificações"].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
@@ -122,6 +122,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Skills Section */}
+      <section id="skills" className="min-h-screen flex items-center justify-center px-4 py-16 sm:py-32">
+        <div className="max-w-6xl w-full text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-light mb-8"
+          >
+            Minhas Habilidades
+          </motion.h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+            {["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "TailwindCSS", "PHP", "Laravel", "GraphQL"].map((skill) => (
+              <motion.div
+                key={skill}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-3xl p-4 sm:p-6"
+              >
+                <p className="text-purple-300/90">{skill}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certificações" className="min-h-screen flex items-center justify-center px-4 py-16 sm:py-32">
+        <div className="max-w-6xl w-full text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-light mb-8"
+          >
+            Certificações
+          </motion.h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {[
+              { title: "Desenvolvimento Web Completo", date: "01/10/2022", description: "Certificação em desenvolvimento Web." },
+              { title: "PHP Completo", date: "02/03/2024", description: "Certificação profissional em PHP, Laravel." },
+              { title: "React Completo", date: "02/02/2025", description: "Certificação em React, Next.js." },
+              { title: "Node.js do Zero a Maestria com diversos Projetos", date: "30/12/2025", description: "Certificação em Node.JS" },
+            ].map((cert, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-3xl p-4 sm:p-6"
+              >
+                <h3 className="text-xl sm:text-2xl font-light mb-2">{cert.title}</h3>
+                <p className="text-purple-300/90 text-sm mb-4">{cert.date}</p>
+                <p className="text-purple-300/90">{cert.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section id="depoimentos" className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-3xl text-center">
@@ -197,10 +258,10 @@ export default function Home() {
             <p className="text-purple-300/90">Ou me encontre nas redes sociais:</p>
             <div className="flex justify-center space-x-4 mt-4">
               <a href="https://www.linkedin.com/in/lucasmf99/" target="_blank" rel="noopener noreferrer">
-                <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" width={32} height={32} />
               </a>
               <a href="https://github.com/lucasmarquesfaria" target="_blank" rel="noopener noreferrer">
-                <Image src="/github.png" alt="GitHub" width={32} height={32} />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" width={32} height={32} />
               </a>
             </div>
           </div>
