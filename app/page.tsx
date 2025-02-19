@@ -126,10 +126,29 @@ export default function Home() {
             className="bg-white/5 backdrop-blur-sm rounded-3xl p-8"
           >
             <h2 className="text-2xl font-light mb-6">Projetos Voluntários</h2>
-            <p className="text-purple-300/90">
+            <p className="text-purple-300/90 mb-6">
               Atualmente colaborando com o Código Certo Coders e VolunDev, auxiliando iniciantes na área de tecnologia e
               fornecendo soluções tecnológicas para projetos sociais.
             </p>
+            <div className="relative w-full h-64 overflow-hidden rounded-3xl">
+              <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="absolute inset-0 flex space-x-4"
+              >
+              {["/project1.png", "/project2.png", "/project3.png"].map((src, index) => (
+                <Image
+                key={index}
+                src={src}
+                alt={`Project ${index + 1}`}
+                width={300}
+                height={200}
+                className="rounded-2xl"
+                />
+              ))}
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
