@@ -113,7 +113,7 @@ export default function Home() {
               </p>
               <ul className="list-disc list-inside text-purple-300/90 mt-4">
                 <li>Desenvolvimento de aplicações web responsivas</li>
-                <li>Integração com APIs RESTful e GraphQL</li>
+                <li>Integração com APIs RESTful</li>
                 <li>Otimização de performance e SEO</li>
                 <li>Testes automatizados e TDD</li>
               </ul>
@@ -134,7 +134,7 @@ export default function Home() {
             Minhas Habilidades
           </motion.h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
-            {["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "TailwindCSS", "PHP", "Laravel", "GraphQL"].map((skill) => (
+            {["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "TailwindCSS", "PHP", "Laravel", "SQL"].map((skill) => (
               <motion.div
                 key={skill}
                 initial={{ opacity: 0, y: 20 }}
