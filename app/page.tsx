@@ -32,22 +32,22 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white/5 backdrop-blur-sm rounded-full px-6 py-3"
         >
-            {["Sobre", "Projetos", "Depoimentos", "Contato"].map((item) => (
+          {["About", "Projects", "Testimonials", "Contact"].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
               className={`px-4 py-2 text-sm transition-colors ${
-              activeSection === item.toLowerCase() ? "text-purple-300" : "text-purple-300/60 hover:text-purple-300"
+                activeSection === item.toLowerCase() ? "text-purple-300" : "text-purple-300/60 hover:text-purple-300"
               }`}
             >
               {item}
             </button>
-            ))}
+          ))}
         </motion.div>
       </nav>
 
       {/* About Section */}
-      <section id="sobre" className="min-h-screen flex flex-col items-center justify-center px-4">
+      <section id="about" className="min-h-screen flex flex-col items-center justify-center px-4">
         <div className="max-w-3xl mx-auto text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
