@@ -5,7 +5,7 @@ import Image from "next/image"
 import { useState } from "react"
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("about")
+  const [activeSection, setActiveSection] = useState("sobre")
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -32,7 +32,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white/5 backdrop-blur-sm rounded-full px-6 py-3"
         >
-          {["About", "Projects", "Testimonials", "Contact"].map((item) => (
+          {["Sobre", "Projetos", "Depoimentos", "Contato"].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
@@ -47,7 +47,7 @@ export default function Home() {
       </nav>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen flex flex-col items-center justify-center px-4">
+      <section id="sobre" className="min-h-screen flex flex-col items-center justify-center px-4">
         <div className="max-w-3xl mx-auto text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ export default function Home() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
             <button
-              onClick={() => scrollToSection("projects")}
+              onClick={() => scrollToSection("projetos")}
               className="group bg-white/5 hover:bg-white/10 text-purple-300/90 px-6 py-3 rounded-full text-sm transition-all"
             >
               Veja meus trabalhos
@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="min-h-screen flex items-center justify-center px-4 py-32">
+      <section id="projetos" className="min-h-screen flex items-center justify-center px-4 py-32">
         <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="min-h-screen flex items-center justify-center px-4">
+      <section id="depoimentos" className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -161,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="min-h-screen flex items-center justify-center px-4">
+      <section id="contato" className="min-h-screen flex items-center justify-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -192,4 +192,3 @@ export default function Home() {
     </main>
   )
 }
-
