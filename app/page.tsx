@@ -137,16 +137,23 @@ export default function Home() {
               viewport={{ once: true }}
               className="absolute inset-0 flex space-x-4"
               >
-              {["/project1.png", "/project2.png", "/project3.png"].map((src, index) => (
-                <Image
-                key={index}
-                src={src}
-                alt={`Project ${index + 1}`}
-                width={300}
-                height={200}
-                className="rounded-2xl"
-                />
-              ))}
+                <motion.div
+                initial={{ x: 0 }}
+                animate={{ x: ["0%", "-33.33%", "-66.66%", "0%"] }}
+                transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+                className="flex space-x-4"
+                >
+                {["/project1.png", "/project2.png", "/project3.png", "/project1.png"].map((src, index) => (
+                  <Image
+                  key={index}
+                  src={src}
+                  alt={`Project ${index + 1}`}
+                  width={300}
+                  height={200}
+                  className="rounded-2xl"
+                  />
+                ))}
+                </motion.div>
               </motion.div>
             </div>
           </motion.div>
