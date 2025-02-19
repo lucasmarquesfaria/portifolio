@@ -165,7 +165,7 @@ export default function Home() {
               { title: "Desenvolvimento Web Completo", date: "01/10/2022", description: "Certificação em desenvolvimento Web." },
               { title: "PHP Completo", date: "02/03/2024", description: "Certificação profissional em PHP, Laravel." },
               { title: "React Completo", date: "02/02/2025", description: "Certificação em React, Next.js." },
-              { title: "Node.js do Zero a Maestria com diversos Projetos", date: "30/12/2025", description: "Certificação em Node.JS" },
+              { title: "Node.js do Zero a Maestria com diversos Projetos", date: "30/12/2024", description: "Certificação em Node.JS" },
             ].map((cert, index) => (
               <motion.div
                 key={index}
