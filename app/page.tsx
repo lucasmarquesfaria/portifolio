@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#010208] text-white relative overflow-x-hidden">
-      {/* Decorative stars */}
+    
       <div className="fixed w-full h-full pointer-events-none">
         <div className="absolute top-8 left-8 w-2 h-2 bg-purple-500/30 rotate-45" />
         <div className="absolute top-8 right-8 w-2 h-2 bg-purple-500/30 rotate-45" />
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="absolute bottom-8 right-8 w-2 h-2 bg-purple-500/30 rotate-45" />
       </div>
 
-      {/* Navigation */}
+      {/* Navegação */}
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -46,7 +46,7 @@ export default function Home() {
         </motion.div>
       </nav>
 
-      {/* About Section */}
+ 
       <section id="sobre" className="min-h-screen flex flex-col items-center justify-center px-4">
         <div className="max-w-3xl mx-auto text-center">
           <motion.p
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
+     
       <section id="projetos" className="min-h-screen flex items-center justify-center px-4 py-16 sm:py-32">
         <div className="max-w-6xl w-full grid gap-8 sm:gap-12 md:grid-cols-2">
           <motion.div
@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
+    
       <section id="skills" className="min-h-screen flex items-center justify-center px-4 py-16 sm:py-32">
         <div className="max-w-6xl w-full text-center">
           <motion.h2
@@ -149,7 +149,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certifications Section */}
+      
       <section id="certificações" className="min-h-screen flex items-center justify-center px-4 py-16 sm:py-32">
         <div className="max-w-6xl w-full text-center">
           <motion.h2
@@ -183,7 +183,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+    
       <section id="depoimentos" className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-3xl text-center">
           <motion.div
@@ -227,7 +227,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+
       <section id="contato" className="min-h-screen flex items-center justify-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
